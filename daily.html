@@ -1,0 +1,63 @@
+<html>
+<head>
+<title>daily</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name=frm method=post action=daily.php>
+<center>
+<table cellspacing=10 cellpadding=10>
+<caption>daily information</caption>
+<tr>
+<td>serial no</td>
+<td><input type=number name=sn onkeypress=val1()></td>
+</tr>
+<tr>
+<td>batch no</td>
+<td><input type=number name=bn onkeypress=val1()></td>
+</tr>
+<tr>
+<td>date</td>
+<td><input type=date name=date></td>
+</tr>
+<tr>
+<td>enrollno</td>
+<td><input type=text name=en></td>
+</tr>
+<tr>
+<td>presenty</td>
+<td><input type=text name=pr></td>
+</tr>
+<tr>
+<td>total km</td>
+<td><input type=number name=tk onkeypress=val1()></td>
+</tr>
+</table>
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+</center>
+</form>
+</body>
+</html>

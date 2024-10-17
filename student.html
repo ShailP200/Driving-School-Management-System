@@ -1,0 +1,111 @@
+<html>
+<head>
+<title>student</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name=frm method=post action=student.php>
+<center>
+<table cellspacing=10 cellpadding=10>
+<caption>student information</caption>
+<tr>
+<td>enrollno</td>
+<td><input type=text name=en></td>
+</tr>
+<tr>
+<td>name</td>
+<td><input type=text name=nm></td>
+</tr>
+<tr>
+<td>gender</td>
+<td><input type=text name=gen></td>
+</tr>
+<tr>
+<td>birth date</td>
+<td><input type=date name=bd></td>
+</tr>
+<tr>
+<td>address</td>
+<td><input type=text name=add></td>
+</tr>
+<tr>
+<td>contact no</td>
+<td><input type=text name=cn></td>
+</tr>
+<tr>
+<td>emailid</td>
+<td><input type=text name=ei></td>
+</tr>
+<tr>
+<td>photo</td>
+<td><input type=text name=ph></td>
+</tr>
+<tr>
+<td>age proof</td>
+<td><input type=text name=agep></td>
+</tr>
+<tr>
+<td>address proof</td>
+<td><input type=text name=addp></td>
+</tr>
+<tr>
+<td>pancard/adharcard</td>
+<td><input type=text name=card></td>
+</tr>
+<tr>
+<td>balance fees</td>
+<td><input type=number name=bf onkeypress=val1()></td>
+</tr>
+<tr>
+<td>batch no</td>
+<td><input type=number name=bn onkeypress=val1()></td>
+</tr>
+<tr>
+<td>vehicle class</td>
+<td><input type=text name=vc onkeypress=val2()></td>
+</tr>
+<tr>
+<td>exist license</td>
+<td><input type=text name=el></td>
+</tr>
+<tr>
+<td>license</td>
+<td><input type=text name=lic></td>
+</tr>
+<tr>
+<td>extra license</td>
+<td><input type=text name=exl></td>
+</tr>
+<tr>
+<td>balanced km</td>
+<td><input type=number name=bk  onkeypress=val1()></td>
+</tr>
+</table>
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+</center>
+</form>
+</body>
+</html>

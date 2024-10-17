@@ -1,0 +1,80 @@
+<html>
+<head>
+<title>batch</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name=frm method=post action=batch.php>
+<center>
+<table cellspacing=10 cellpadding=10>
+<caption>batch information</caption>
+<tr>
+<td>batch no</td>
+<td><input type=number name=bn onkeypress=val1()></td>
+</tr>
+<tr>
+<td>vehicle class</td>
+<td><input type=text name=vc onkeypress=val2()></td>
+</tr>
+<tr>
+<td>start date</td>
+<td><input type=date name=sd></td>
+</tr>
+<tr>
+<td>end date</td>
+<td><input type=date name=ed></td>
+</tr>
+<tr>
+<td>from time</td>
+<td><input type=text name=ft></td>
+</tr>  
+<tr>
+<td>to time</td>
+<td><input type=text name=tt></td>
+</tr>
+<tr>  
+<td>driver code</td>
+<td><input type=text name=dc></td>
+</tr> 
+<tr>
+<td>capacity</td>
+<td><input type=number name=cap onkeypress=val1()></td>
+</tr>  
+<tr>
+<td>occupy</td>
+<td><input type=number name=occ onkeypress=val1()></td>
+</tr>  
+<tr>
+<td>batch type</td>
+<td><input type=text name=bt></td>
+</tr>  
+<tr>
+</table>
+	<input type="submit" name="sbm" value="Submit">
+	<input type="submit" name="sbm" value="Update">
+	<input type="submit" name="sbm" value="Delete">
+	<input type="submit" name="sbm" value="Display">
+	<input type="submit" name="sbm" value="Search">
+</center>
+</form>
+</body>
+</html>

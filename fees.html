@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>fees</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name=frm method=post action=fees.php>
+<center>
+<table cellspacing=10 cellpadding=10>
+<caption>fees information</caption>
+<tr>
+<td>serialno</td>
+<td><input type=number name=sn onkeypress=val1()></td>
+</tr>
+<tr>
+<td>vehicle class</td>
+<td><input type=text name=vc onkeypress=val2()></td>
+</tr>
+<tr>
+<td>total fees</td>
+<td><input type=number name=tf></td>
+</tr>
+<tr>
+<td>license fees</td>
+<td><input type=number name=lf></td>
+</tr>
+</table>
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+</center>
+</form>
+</body>
+</html>
+
+

@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>paid fees</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name=frm method=post action=paidfees.php>
+<center>
+<table cellspacing=10 cellpadding=10>
+<caption>paid fees information</caption>
+<tr>
+<td>voucherno</td>
+<td><input type=number name=vn onkeypress=val1()></td>
+</tr>
+<tr>
+<td>voucher date</td>
+<td><input type=date name=vd></td>
+</tr>
+<tr>
+<td>enrollno</td>
+<td><input type=text name=en></td>
+</tr>
+<tr>
+<td>fees</td>
+<td><input type=number name=fe onkeypress=val1()></td>
+</tr>
+</table>
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+</center>
+</form>
+</body>
+</html>

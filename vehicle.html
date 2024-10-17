@@ -1,0 +1,55 @@
+<html>
+<head>
+<title>vehicle</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name=frm method=post action=vehicle.php>
+<center>
+<table cellspacing=10 cellpadding=10>
+<caption>vehicle information</caption>
+<tr>
+<td>vehicle no</td>
+<td><input type=text name=vno></td>
+</tr>
+<tr>
+<td>vehicle class</td>
+<td><input type=text name=vc onkeypress=val2()></td>
+</tr>
+<tr>
+<td>make</td>
+<td><input type=text name=mk></td>
+</tr>
+<tr>
+<td>model</td>
+<td><input type=text name=mdl></td>
+</tr>
+</table>
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+</center>
+</form>
+</body>
+</html>

@@ -1,0 +1,78 @@
+<html>
+<head>
+<title>Driver Information</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form  name= frm3 method=POST action=driver.php>
+<center>
+<table cellspacing= 7 cellpadding= 7>
+<caption>Driver's Informaton</caption>
+<tr>
+<td>Driver Code :</td>
+<td><input type="text" name="dc">  </td>
+	
+</tr>
+<tr>
+<td>Driver Name :</td>
+<td><input type="text" name="dn"> </td>
+</tr>
+<tr>
+<td>driver Address :</td>
+<td><input type="text " name="da"> </td>
+</tr>
+<tr>
+<td>City : </td>
+<td><input type="text" name="dct"></td>
+</tr>
+<tr>
+<td>Contact No.:</td>
+<td><input type="text" name="dcn" onkeypress=val1()></td>
+</tr>
+<tr>
+<td>Email Id :</td>
+<td><input type="email" name="dm"></td>
+</tr>
+<tr>
+<td>Gender :</td>
+<td><input type="text" name="dg"></td>
+</tr>
+<tr>
+<td>Age :</td>
+<td><input type="number" name="dage" onkeypress=val1()></td>
+</tr>
+<tr>
+<td>Experience :</td>
+<td><input type="number" name="de" onkeypress=val1()></td>
+</tr>
+
+</table>
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+
+</center>
+</form>
+</body>
+</html>

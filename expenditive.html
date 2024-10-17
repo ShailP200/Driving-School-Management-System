@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Expenditive</title>
+<script language=javascript>
+function val1()
+{
+var x;
+x=event.keyCode;
+if(x>=48 && x<=57)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+function val2()
+{
+var x;
+x=event.keyCode;
+if(x>=65 && x<=90)
+event.keyCode=event.keyCode;
+else
+event.keyCode=0;
+}
+</script>
+</head>
+<body>
+<form name= frm method=POST action=expenditive.php>
+<center>
+<table cellspacing= 7 cellpadding= 7>
+<caption>Expenditive</caption>
+<tr>	
+<td>Expenditive No.:</td>
+<td><input type="number" name="expno" onkeypress=val1()></td>
+</tr>
+<tr>
+<td>Expenditive Date :</td>
+<td><input type="date" name="expd"></td>
+</tr>
+<tr>
+<td>Amount :</td>
+<td><input type="number" name="amt" onkeypress=val1()></td>
+</tr>
+<tr>
+<td>Remark:</td>
+<td><input type="text" name="rmk"></td>
+</tr>
+</table>
+	
+<input type="submit" name="sbm" value="Submit">
+<input type="submit" name="sbm" value="Update">
+<input type="submit" name="sbm" value="Delete">
+<input type="submit" name="sbm" value="Display">
+<input type="submit" name="sbm" value="Search">
+
+</center>
+</form>
+</body>
+</html>
